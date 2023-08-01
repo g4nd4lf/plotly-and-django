@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gráfica Interactiva</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Gráfica Interactiva</h1>
+    <div id="chart-div"></div>
+
+    <script>
+        // Obtener la gráfica en formato JSON desde el contexto Django
+        var chartJson = {{ chart|safe }};
+
+        // Mostrar la gráfica en el div con id "chart-div"
+        Plotly.newPlot('chart-div', JSON.parse(chartJson));
+    </script>
+</body>
+</html>
