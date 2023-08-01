@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <title>Gráfica Interactiva</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        #container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+        #graf1,#graf2
+        {
+            width: 600px
+        }
+
+    </style>
 </head>
 <body>
     <h1>Gráfica Interactiva</h1>
-    <div id="chart-div"></div>
-
+    <div id="container">
+        <div id="graf1"></div>
+        <div id="graf2"></div>
+    </div>
     <script>
-        // Obtener la gráfica en formato JSON desde el contexto Django
-        var chartJson = {{ chart|safe }};
-
-        // Mostrar la gráfica en el div con id "chart-div"
-        Plotly.newPlot('chart-div', JSON.parse(chartJson));
+        var dat =JSON.parse("{{ data |escapejs }}")
+        var dat2 =JSON.parse("{{ data2 |escapejs }}")
+        var layout= JSON.parse("{{ layout|escapejs }}")
+        Plotly.newPlot('graf1', dat)
+        Plotly.newPlot('graf2', dat2,layout);
     </script>
 </body>
 </html>
