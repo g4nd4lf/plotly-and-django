@@ -1,7 +1,12 @@
 import pandas as pd
 import plotly.express as px
+from django.http import HttpResponse
 from django.shortcuts import render
 import json
+
+def index(request):
+    #return HttpResponse("Hello, world!")
+    return render(request, "plotlyapp/index.html")
 
 def interactive_chart(request):
     # Datos de ejemplo (reemplazar esto con tus propios datos)
@@ -39,4 +44,4 @@ def interactive_chart(request):
     chart = fig.to_json()
 
     # Renderizar el template con la gráfica
-    return render(request, 'chart.html', {"data": chart, "data2":json.dumps(data2), "layout":json.dumps(layout)})
+    return render(request, 'plotly/chart.html', {"data": chart, "data2":json.dumps(data2), "layout":json.dumps(layout)})

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>SF2gs</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        #container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+        #graf1,#graf2
+        {
+            width: 600px
+        }
+
+    </style>
+</head>
+<body>
+    <h1>IRRIWELL Mundosol data visualization</h1>
+    <div>
+        <label for="opciones">Selecciona una opción:</label>
+        <select id="opciones" name="opciones">
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+            <option value="opcion4">Opción 4</option>
+            <!-- Puedes agregar más opciones aquí -->
+        </select>
+    </div>
+    <div id="container">
+        <div id="graf1"></div>
+        <div id="graf2"></div>
+    </div>
+    <script>
+        var dat =JSON.parse("{{ data |escapejs }}")
+        var dat2 =JSON.parse("{{ data2 |escapejs }}")
+        var layout= JSON.parse("{{ layout|escapejs }}")
+        Plotly.newPlot('graf1', dat)
+        Plotly.newPlot('graf2', dat2,layout);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/Users/RRV/Library/Caches/fnm_multishells/11242_1691259928603/bin
+/users/RRV/homebrew/opt/php@8.1/sbin
+/users/RRV/homebrew/opt/php@8.1/bin
+/users/RRV/homebrew/opt/git/bin
+/opt/local/bin
+/opt/local/sbin
+/users/RRV/homebrew/bin
+/Library/Frameworks/Python.framework/Versions/3.8/bin
+/Library/Frameworks/Python.framework/Versions/3.6/bin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+/opt/X11/bin
+/Library/Apple/usr/bin
+/Users/RRV/Library/Caches/fnm_multishells/7360_1691259337831/bin
+/Users/RRV/.cargo/bin
+/users/RRV/homebrew/opt/php@8.1/sbin
+/users/RRV/homebrew/opt/php@8.1/bin
+/Users/RRV/miniconda3/bin
+/Users/RRV/miniconda3/condabin
+/users/RRV/homebrew/opt/git/bin
+/opt/local/bin
+/opt/local/sbin
+/users/RRV/homebrew/bin
+/Library/Frameworks/Python.framework/Versions/3.8/bin
+/Library/Frameworks/Python.framework/Versions/3.6/bin
+/Applications/LibreOffice.app/Contents/MacOS
+/Applications/Visual Studio Code.app/Contents/Resources/app/bin
+/Applications/LibreOffice.app/Contents/MacOS
+/Applications/Visual Studio Code.app/Contents/Resources/app/bin
