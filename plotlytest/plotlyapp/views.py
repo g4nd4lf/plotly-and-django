@@ -23,7 +23,11 @@ def interactive_chart(request):
     # Crear la gráfica de barras interactiva con Plotly
     fig = px.bar(df, x='Ciudad', y='Poblacion', title='Población por Ciudad')
 
-    data2 = [{"x": [1, 2, 3, 4, 5], "y": [10, 11, 12, 13, 14], "type": 'scatter', "mode": 'lines+markers', "name": 'Línea 1'}]
+    data2 = [{"x": [1, 2, 3, 4, 5], 
+              "y": [10, 11, 12, 13, 14], 
+              "type": 'scatter', 
+              "mode": 'lines+markers',
+                "name": 'Línea 1'}]
     layout = {
             "title": "Gráfica Interactiva",
             "xaxis": {
@@ -33,15 +37,7 @@ def interactive_chart(request):
                 "title": "Eje Y"
             }
         }
-
-    # Convertir los datos en un DataFrame de pandas
-    #df = pd.DataFrame(data)
-
-    # Crear la gráfica de barras interactiva con Plotly
-    #fig = px.bar(df, x='Ciudad', y='Poblacion', title='Población por Ciudad')
-
-    # Convertir la gráfica en formato JSON para enviarla al template
     chart = fig.to_json()
-
-    # Renderizar el template con la gráfica
-    return render(request, 'plotly/chart.html', {"data": chart, "data2":json.dumps(data2), "layout":json.dumps(layout)})
+    return render(request, 'plotlyapp/chart.html', 
+                  {"data": chart, "data2":json.dumps(data2), 
+                   "layout":json.dumps(layout)})
